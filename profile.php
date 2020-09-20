@@ -12,7 +12,7 @@
 				$cn=$_GET['createnewadress'];//cryptoname
 				$wallet->getNewAddressForAccount($cn, $username);
 				echo '...added...';
-				//return header("Location: ?");
+				return header("Location: ?");
 			}
 		}
 ?>
