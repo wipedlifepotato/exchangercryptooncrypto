@@ -1,0 +1,51 @@
+
+	.layer2,.layer3,.layer4{
+		animation-duration: 4s;
+		animation-iteration: 9999;
+		animation-iteration-count: infinite;
+		animation-duration: 2s;	
+	}
+	.layer2{
+		animation-name: captchaAnimation;
+	}
+	.layer3{
+		animation-name: captchaAnimationi1;
+	}
+	.layer4{
+		animation-name: captchaAnimationi3;
+	}
+
+	.i0,.i1,.i2,.i3,.i4, .captchabox, .captchaboxfake{
+		position: relative;
+
+	}
+	#captchas{
+		position:relative;
+		text-align:center;
+	}
+	.captchabox, .captchaboxfake{
+		/*overflow:hidden;*/
+		width:110px;
+		height:55px;
+		position:absolute;
+	}
+	.captchabox, .captchaboxfake{
+		background-repeat:no-repeat;
+		background-size: cover;
+	}
+	.captchabox{
+	    z-index: 4;
+	    background-image: url("/init_captcha.php"); 
+	}
+	.captchaboxfake{
+		
+	}
+
+	   #layer1, #layer2, #layer3, #layer4 {
+	    position: fixed; /* Относительное позиционирование */
+	   } 
+	   .layer1  { z-index: 4;background-image: url("/init_captcha.php");background-position: 0 0; }
+	   .layer2 { z-index: 2;background-image: url("/init_captcha.php?fake=true&i=1");background-position: 15px 15px; }
+	   .layer3 { z-index: 3;background-image: url("/init_captcha.php?fake=true&i=2");background-position: 16 -16px; }
+	   .layer4 { z-index: 1; background-image: url("/init_captcha.php?fake=true&i=3");background-position: -16 16px;}
+

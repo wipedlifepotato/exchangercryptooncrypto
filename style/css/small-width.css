@@ -1,0 +1,61 @@
+@media only screen and (max-width: 600px) {
+	#topmenu{
+		margin-top:2px;
+		padding-bottom:50px;
+
+		display: block;
+		border: none;
+		width: 100%;
+		position:relative;
+		background: rgb(0, 111, 72) none repeat scroll 0% 0%;
+
+	}
+	#topmenu ul{
+
+		height: 50px;
+		margin: 0;
+		padding: 0;
+		display:block;
+		float:center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.menu-item a{
+		padding: 5px 6px;
+		border-right:none;
+	}
+	#topmenu .rightmenu a{
+		display:block;
+		font-size:0.4em;
+	}
+	input{
+		width: 50%;
+	};
+	body{
+		font-size:0.5em;
+	}
+	.boxask a  {
+		font-size:0.6em;
+	}
+	.boxask{overflow:scroll;}
+}
+@media only screen and (max-width: 120px) {
+	.menu-item a{
+		font-size:0.6em;
+	}
+	.splitinline{display:none;}
+	#topmenu .rightmenu a{
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#rightmenu{
+		display:none;
+	}
+	body{
+	
+	}
+}

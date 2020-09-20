@@ -1,0 +1,53 @@
+	.boxask {
+		margin:0 auto;
+		padding: 0 auto;
+		color:#2d2e2e;
+		background-color:white;
+		width:35%;
+		border: 2px ridge #fca311;
+		opacity: 0.9;
+	}
+	.boxask:hover{
+		opacity:1.0;
+	}
+	.boxask form{
+
+	}
+	.boxask button{
+		background-color:#1A87C2;
+		color:#000;
+
+	}
+	.boxask a:visited{
+		background-color:#1A87C2;
+		color:#000;
+
+	}
+	.boxask a{
+		background-color:#1A87C2;
+		color:#f0f0f0;
+		transition: 0s background-color;
+	}
+	.boxask a:hover, .boxask button:hover{
+		background-color:#1A17C2;
+		border: 1px ridge #000;
+		text-decoration: none;
+		color:cyan;
+                transition-delay:0.1s;
+
+	}
+	.boxask button{
+		/*color:white;*/
+	}
+	.boxask button:hover{
+		background-color:#1A17C2;
+		border: 1px ridge #000;
+		text-decoration: none;
+	}
+	.boxask {
+		text-align:center;
+	  	text-transform: uppercase;
+	}
+	.boxask a::before, .boxask a::after, button::before, button::after{
+		content: "|";
+	}

@@ -1,0 +1,38 @@
+	@keyframes loader{
+	  5%{color:#000000;}
+	  20%{color:green;}
+	  100% {color:#123456;}
+	}
+	@keyframes captchaAnimation{
+		0%{background-position: 15px 15px;}
+		5%{background-position: 15px 20px;}
+		10%{background-position: 20px 20px;}
+		30%{background-position: 10px 10px;}
+		50%{background-position: -15px 15px;}
+		60%{background-position: -20px -20px;}
+		80%{background-position: -20px 5px;}
+		100%{background-position: 10px 5px;}
+	}
+	@keyframes captchaAnimationi1{
+		0%{background-position: 16px -16px;}
+		5%{background-position: 15px 20px;z-index:1;}
+		10%{background-position: 20px 20px;z-index:0;}
+		30%{background-position: 10px 10px;z-index:2}
+		50%{background-position: -15px -15px;}
+		60%{background-position: -20px 20px;}
+		80%{background-position: -20px 5px;z-index:3}
+		100%{background-position: 10px 5px;z-index:1}	
+	}
+	@keyframes captchaAnimationi3{
+		0%{background-position: -16px -16px;}
+		5%{background-position: 15px 20px;z-index:1;}
+		10%{background-position: 20px 20px;}
+		30%{background-position: 10px 10px;z-index:2;}
+		50%{background-position: -15px 15px;}
+		60%{background-position: -20px -20px;z-index:0;}
+		80%{background-position: -20px 5px;z-index:3;}
+		100%{background-position: 10px 5px;z-index:1;}	
+	}
+	@keyframes captchaAnimationi4{
+		
+	}
