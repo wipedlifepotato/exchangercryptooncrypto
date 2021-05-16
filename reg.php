@@ -20,10 +20,12 @@
 
 	$captchacorrect = -1;
 
-	if (isset ($_POST['captcha']) && 
-		isset ($_SESSION['HYPNOSE']) && 
-		strlen($_SESSION['HYPNOSE']) > 0  
-	   ) $captchacorrect = hash ( "sha1", $_POST['captcha'] ) == $_SESSION['HYPNOSE'];
+	if (NEVER_USE_CAPTCHAS_BOOL) $captchacorrect = true;
+	else
+		if (isset ($_POST['captcha']) && 
+			isset ($_SESSION['HYPNOSE']) && 
+			strlen($_SESSION['HYPNOSE']) > 0  
+		   ) $captchacorrect = hash ( "sha1", $_POST['captcha'] ) == $_SESSION['HYPNOSE'];
 	if( isNeed(array("pass")) && $captchacorrect===true ){
 		unset($_SESSION['HYPNOSE']);
 		unset($_SESSION);		
@@ -40,6 +42,7 @@
 		$ret=$u->addUser($_POST['pass']);//Todo: addCryptoAddresses
 		if($ret[0] != False){
 			setLoginCookie($ret[1],$_POST['pass']);
+			//TODO localize
 			print("
 				<div id='reg' class='boxask'>
 				<center style='background-color:#1A87C2;color:white'>Успешная регистрация</center><br/>
@@ -86,16 +89,20 @@
 		</center><br/>
 
 		<input type=text name=pass placeholder='<?php echo $lang->words['Create a password'];?>'/><br/>
-		<input type=text name=captcha placeholder='<?php echo $lang->words['Captcha'];?>'/><br/>
+		<?php
+			if (NEVER_USE_CAPTCHAS_BOOL) {} else { ?>
+				<input type=text name=captcha placeholder='<?php echo $lang->words['Captcha'];?>'/><br/>
 
-		<center>
-			<div id="captchas" class='captchabox'>
-	            <div class="captchaboxfake layer1"></div>
-	            <div class="captchaboxfake layer2"></div>
-	            <div class="captchaboxfake layer3"></div>
-	            <div class="captchaboxfake layer4"></div>
-	        </div>
-		</center>
+				<center>
+					<div id="captchas" class='captchabox'>
+			            <div class="captchaboxfake layer1"></div>
+			            <div class="captchaboxfake layer2"></div>
+			            <div class="captchaboxfake layer3"></div>
+			            <div class="captchaboxfake layer4"></div>
+			        </div>
+				</center>
+			<?php }
+		?>
 
 		<hr/>
 
