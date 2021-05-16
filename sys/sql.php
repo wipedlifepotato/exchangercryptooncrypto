@@ -1,8 +1,9 @@
 <?php
 
+define('SQL_DEBUG_TRACE_ON', false);
+
 class sql
 {
-    define('SQL_DEBUG_TRACE_ON', false);
 
     const sqls = array(
         "getAllUsers" => "SELECT * from users;",
