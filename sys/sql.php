@@ -1,6 +1,6 @@
 <?php
 
-define('SQL_DEBUG_TRACE_ON', false);
+define('SQL_DEBUG_TRACE_ON', true);
 
 class sql
 {
