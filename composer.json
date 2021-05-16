@@ -1,5 +1,7 @@
 {
     "require": {
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "denpa/php-bitcoinrpc": "^2.1",
+        "twig/twig": "^3.0"
     }
 }
