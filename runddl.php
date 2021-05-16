@@ -19,7 +19,7 @@
 		}
 	}
 
-	if (RUNDDL_PASSWORD != $_GET("RUNDDL_PASSWORD")) {
+	if (RUNDDL_PASSWORD != $_GET['RUNDDL_PASSWORD']) {
 		sleep(3);
 		die("Not authorized");
 	}
