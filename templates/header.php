@@ -22,9 +22,9 @@
 		<title><?php echo getTitle($titles); ?></title>
 		<link rel="stylesheet" href="/style/css/main.css">
 		<meta charset=utf-8>
-  		<meta http-equiv="Content-Security-Policy" content="script-src 'none'">
+  		<!-- <meta http-equiv="Content-Security-Policy" content="script-src 'none'"> -->
 	</head>
-	<script src=style/js/animations.js></script>
+	<script src='style/js/animations.js'></script>
 	<body>
 	<div id='loader'><div id='loader-text'></div></div>
 

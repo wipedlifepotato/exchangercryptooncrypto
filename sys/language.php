@@ -13,7 +13,7 @@
 		"Captcha"=> "Капча",
 		"Enter" => "Вход",
 		"Create a password"=>"Придумайте пароль",
-		"The uncorrect captcha" => "Капча введена не верно!",
+		"Incorrect captcha" => "Капча введена неверно!",
 		"Start private chat" => "Начать приватный чат",
 		"Back" => "Назад",
 		"Coversations" => "Переписки"

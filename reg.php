@@ -3,7 +3,7 @@
 require_once('sys/util.php');
 if ( checkAuth($_COOKIE) ){
 		header('Location: /profile.php');	
-		die("YOU ARE WELCOME! REDIRECT TO <a href=/profile.php>profile</a>");
+		die("YOU ARE WELCOME! REDIRECTING TO <a href=/profile.php>profile</a>");
 }
 
 session_start();
@@ -46,6 +46,7 @@ print("
 			//	print("$name - $address</br>");
 			//}
 			print("<hr/>");
+//TODO localization
 print('
  <div class="form-group">
   <label for="usr">ID(логин):</label>
@@ -56,7 +57,9 @@ print('
   <input type="text" class="form-control" value="'.$_POST['pass'].'" disabled>
 </div> 
 ');
-			print("<p style=color:red>Сохраните эти данные в безопасном месте!(control+S / control+P)</p><br/><a href='profile.php'>Profile</a>");
+			//TODO localization
+			print("<p style=color:red>Сохраните эти данные в безопасном месте!(CTRL+S или CTRL+P)</p><br/><a href='profile.php'>Profile</a>"); 
+
 			include('templates/footer.php');
 			exit(0);
 		}else{
@@ -74,8 +77,6 @@ print('
 <?php
 	setRandBackground();
 ?>
-	<body>
-
 			<div id='reg' class='boxask'>
 				<form action='reg.php' method=POST>
 					<center style='background-color:#1A87C2;color:white'><?php echo $lang->words['Registration'];?></center><br/>
@@ -99,7 +100,7 @@ print('
 				    	<hr/><a href='setLang.php?lang=eng' class="btn btn-primary">ENG</a>
 				    	<a href='setLang.php?lang=rus' class="btn btn-primary">RUS</a>
 <?php
-	if(! $captchacorrect && $captchacorrect !== -1 ) print("<div style='color:red'>".$lang->words['The uncorrect captcha']."</div>");
+	if(! $captchacorrect && $captchacorrect !== -1 ) print("<div style='color:red'>".$lang->words['Incorrect captcha']."</div>");
 ?>
 </center>
 				
