@@ -19,11 +19,11 @@
 		die("Not authorized");
 	}
 
-	$coinname = $_GET['SETCOIN_PASSWORD'];
-	$rpchost = $_GET['SETCOIN_PASSWORD'];
-	$rpcport = $_GET['SETCOIN_PASSWORD'];
-	$rpcuser = $_GET['SETCOIN_PASSWORD'];
-	$rpcpassword = $_GET['SETCOIN_PASSWORD'];
+	$coinname = $_GET['coinname'];
+	$rpchost = $_GET['rpchost'];
+	$rpcport = $_GET['rpcport'];
+	$rpcuser = $_GET['rpcuser'];
+	$rpcpassword = $_GET['rpcpassword'];
 
 	print ("Updating or inserting coinname='$coinname' with rpchost='$rpchost' rpcport='$rpcport' rpcuser='$rpcuser' rpcpassword='$rpcpassword'... ");
 
