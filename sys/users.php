@@ -1,30 +1,35 @@
 <?php
+
 require_once('sys/sql.php');
 require_once('sys/util.php');
-class users extends sql
-{
+
+class users extends sql {
+
+    function __construct($sql) {
+       $this->sql = $sql;
+    }
+
     static function issetCookies(){
 		if( isset($_COOKIE['login']) && isset($_COOKIE['pass'])) return true;
 		return false;
     }
     function mksecret($u,$p){
-	return hash("md5", $u . $p); //maybe not md5?
-    }
-    function __construct($sql){
-	$this->sql = $sql;
+	   return hash("md5", $u . $p); //FIXME maybe not md5?
     }
     function getHashPass($secret, $password, $algo='sha512'){
 	return hash($algo, $secret . $password . $secret); 
     }
 // "checkHashPassByUser" => "SELECT * FROM users WHERE name='%s' and password='%s' and secret='%s'",
     function checkHashPass($username, $password, $algo ='sha512'){
+        if ($username == '') die ("please press Back and specify the username"); //TODO localization and better UX
+
         $secret = $this->mksecret($username, $password);
         $hashpass = $this->getHashPass($secret ,$password); 
 
         $res = $this->sql->doSQL(sql::sqls['checkHashPassByUser'], $username, $hashpass, $secret);
         if ( gettype ($res) == "boolean" ) die("mysql query failed: checkHashPassByUser");
         $res = mysqli_fetch_array($res);
-        return $res['name'] != "";	
+        return $res['name'] != '';	
     }
     //        "addUser" => "INSERT INTO users (name, password, secret, REGISTERED) VALUES( '%s', '%s', '%s', 'NOW()')",
     function addUser($password, $nicksize=10)

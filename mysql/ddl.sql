@@ -19,9 +19,9 @@
 -- Current Database: `ancms`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `ancms` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+-- CREATE DATABASE /*!32312 IF NOT EXISTS*/ `ancms` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `ancms`;
+-- USE `ancms`;
 
 --
 -- Table structure for table `ExchangeWall`

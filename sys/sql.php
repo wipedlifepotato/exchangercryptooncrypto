@@ -53,7 +53,7 @@ class sql
     function doSQL($sprintf, ...$arguments)
     {
         $string = vsprintf($sprintf, $arguments);
-        if(SQL_DEBUG_TRACE_ON)printf("Debug info: %s\n\r<br>", $string);
+        if(SQL_DEBUG_TRACE_ON)printf("SQL debug trace: %s\n\r<br>", $string);
 	
         $result = mysqli_query($this->con, $string);
         return $result;

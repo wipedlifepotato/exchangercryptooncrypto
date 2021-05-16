@@ -3,7 +3,7 @@
 
 		if ( !checkAuth($_COOKIE) ){
 				header('Location: /index.php');	
-				die("YOU NOT ARE WELCOME! REDIRECT TO <a href=/index.php>auth</a>");
+				die("REDIRECTING TO <a href=/index.php>auth</a>");
 		}
 		require_once('config.php');
 		require_once('sys/users.php');
@@ -31,7 +31,7 @@
         <a class="" href="exchange.php">обменик</a>
       </li>
       <li class="menu-item">
-        <a class="disabled" href="#"><?php echo $lang->words['Coversations'];?></a>
+        <a class="disabled" href="#"><?php echo $lang->words['Conversations'];?></a>
       </li>
 
      <li style="list-style:none;"><div class='splitinline'></div></li>

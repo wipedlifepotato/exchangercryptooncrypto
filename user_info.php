@@ -3,7 +3,7 @@
 		require_once('sys/util.php');
 		if ( !checkAuth($_COOKIE) ){
 				header('Location: /index.php');	
-				die("YOU NOT ARE WELCOME! REDIRECT TO <a href=/index.php>auth</a>");
+				die("REDIRECTING TO <a href=/index.php>auth</a>");
 		}
 		require_once('config.php');
 		require_once('sys/users.php');
