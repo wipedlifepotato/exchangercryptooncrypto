@@ -15,7 +15,7 @@ class sql
         "delCommentsWhereIS" => "DELETE FROM comments WHERE %s='%s'",
 
 	"getCryptoCoins" => "SELECT * FROM cryptocoins",
-	"addCryptoCoin" => "INSERT INTO cryptocoins(name, host, port, rpcuser, rpcpassword) VALUES('%s','%s','%s','%s', '%s');",
+	"addCryptoCoin" => "INSERT OR UPDATE cryptocoins(name, host, port, rpcuser, rpcpassword) VALUES('%s','%s','%s','%s', '%s');",
 	"getUserPrefixForCoinByName" => "SELECT user_prefix FROM cryptocoins where name='%s'",
 	"getWalletsOfUsername" => "SELECT wallets.*,cryptocoins.name FROM wallets INNER JOIN cryptocoins ON cryptocoins.id=wallets.cryptocoin_id WHERE wallets.owner_id='%s'",
 

@@ -31,7 +31,7 @@ class wallets{
 	}
 	function test_cryptocoins(){
 		foreach( $this->cryptocoins->coins as $name=>$crypto ){
-			print("Balance $name now-> ".$crypto->getBalance()."\n</br>");
+			print("Balance of $name now: ".$crypto->getBalance()."\n</br>");
 		}
 	}
 	function createAccountsForUser($username){
@@ -57,7 +57,12 @@ class wallets{
 		*/
 	}
 	function getBalance($cryptocoinName, $username){
-		
+		/*
+		//TODO take $username into account
+		$crypto = $this->cryptocoins->coins[$cryptocoinName];
+		$balance = $crypto->getBalance();
+		print("Balance of $cryptocoinName now: $balance\n</br>");
+		*/
 	}
 	function send($cryptocoinName, $username, $to, $amount){
 		$prefix=$this->cryptocoins->getUserPrefixForCoinsByName($cryptocoinName);
@@ -132,6 +137,5 @@ class wallets{
 		}
 		return $wallets;	
 	}
-	
 };
 ?>
