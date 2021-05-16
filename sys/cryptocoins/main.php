@@ -20,8 +20,8 @@ class CryptoCoin extends users {
 				$coin['rpcuser'],$coin['rpcpassword'],
 				$coin['host'],$coin['port']
 			);
-			stdout("coin_url='$coin_url'");
 			$name=$coin['name'];
+			stdout("coin_name='$name' coin_url='$coin_url'\n");
 			$this->coins[$name] = new BitcoinClient($coin_url);
 		};
 	}
