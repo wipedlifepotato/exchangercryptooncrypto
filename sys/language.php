@@ -5,6 +5,7 @@
 		//because we are want use 2 language eng/rus, not more;
 	    	const def = array(
 		"Registration"=>"Регистрация",
+		"Sign Up" => "Создать учётную запись",
 		"Authorization" => "Авторизация",
 		"Profile"=>"Профиль",
 		"Main"=>"Главная / Авторизация",

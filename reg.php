@@ -82,7 +82,7 @@
 <div id='reg' class='boxask'>
 	<form action='reg.php' method=POST>
 		<center style='background-color:#1A87C2;color:white'>
-			<?php echo $lang->words['Registration'];?>
+			<?php echo $lang->words['Sign Up'];?>
 		</center><br/>
 
 		<input type=text name=pass placeholder='<?php echo $lang->words['Create a password'];?>'/><br/>
@@ -108,12 +108,11 @@
 		<a href='setLang.php?lang=rus' class="btn btn-primary">RUS</a>
 
 		<?php
-			if (!$captchacorrect) {
-				if ($captchacorrect === -1) 
-					print("<div style='color:red'>".$lang->words["It's unknown whether captcha is correct or not, failing"]."</div>");
-				else
+			if ($captchacorrect === -1) 
+				print("<div style='color:red'>".$lang->words["It's unknown whether captcha is correct or not, failing"]."</div>");
+			else
+				if (!$captchacorrect)
 					print("<div style='color:red'>".$lang->words['Incorrect captcha']."</div>");
-			}
 		?>
 	</form>
 </div>
