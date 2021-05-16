@@ -19,8 +19,8 @@ function ChangeLoaderText(){
 	loadertext.innerHTML = getRandString(10000); 
 	if(!loaded)
 		setTimeout(ChangeLoaderText, 500);
-	console.log("Disable javascript!!");
-	alert("Disable javascript!!");
+	//console.log("Disable javascript!!");
+	//alert("Disable javascript!!");
 }
 
 
