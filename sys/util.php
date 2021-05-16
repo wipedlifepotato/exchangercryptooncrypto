@@ -1,6 +1,9 @@
 <?php
-   require_once('config.php');
-   require_once('sys/users.php');
+    require_once('config.php');
+    require_once('sys/users.php');
+
+    function log($str) { fwrite(STDOUT, $str); }
+    function logprint($str) { log($str); print($str); }
 
     function generateRandString($length=10,$alphabite = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' ){
 	$randomString = ''; 

@@ -14,12 +14,13 @@ class CryptoCoin extends users {
 		$this->coins =array();
 		$coins = $this->getCryptoCoins();
 
-		while($coin = mysqli_fetch_array($coins)){
+		while($coin = mysqli_fetch_array($coins)) {
 			//foreach($coins as $coin){
 			$coin_url = sprintf("http://%s:%s@%s:%s/",
 				$coin['rpcuser'],$coin['rpcpassword'],
 				$coin['host'],$coin['port']
 			);
+			log("coin_url='$coin_url'");
 			$name=$coin['name'];
 			$this->coins[$name] = new BitcoinClient($coin_url);
 		};
