@@ -23,10 +23,12 @@ class Simply_Captcha_Render{
 	
 	public function checkGD() {
         $debug_trace = false;
-        if (!$debug_trace) return;
         $gd_list_of_functions = get_extension_funcs("gd");
-        if (!$gd_list_of_functions) { echo "<p>PHP GD not installed.</p>"; exit; }
-        echo "<p>PHP GD list of functions:</p><p><pre>".print_r($gd_list_of_functions, true)."</pre></p>";
+        if (!$gd_list_of_functions) {
+            echo "<p>Error: PHP GD not installed.</p>";
+            exit;
+        }
+        if ($debug_trace) echo "<p>PHP GD list of functions:</p><p><pre>".print_r($gd_list_of_functions, true)."</pre></p>";
     }
 
 	public function initImage(/*integer*/ $width,/*integer*/ $height){
