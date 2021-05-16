@@ -1,19 +1,17 @@
 	body,html{
 		    margin:0 auto;
-		    padding: 0 auto;
 		    text-align:center;
-		    background: url( '/style/mainbackground.jpeg' ) no-repeat center center fixed;
+
+		    /* 
+		    // /style/mainbackground.jpeg 404:
+		    background: url( '/style/mainbackground.jpeg' ) no-repeat center center fixed;*/
 		    background:rgb(0, 116, 57) no-repeat center center fixed;
 		   /* background-position:fixed;
-		   */
-		    
-		   
 		    background-size: cover;
 		    background-repeat: no-repeat;
 		    background-position: center;
+		   */
 		    -webkit-background-size: cover;
-		    -moz-background-size: cover;
-		    -o-background-size: cover;
 		    color:rgb(98, 217, 156);
 	}
 	a{
