@@ -110,9 +110,9 @@
 		<?php
 			if (!$captchacorrect) {
 				if ($captchacorrect === -1) 
-					print("<div style='color:red'>".$lang->words["It's unknown whether captcha is correct or not, failing"]."</div>");)
+					print("<div style='color:red'>".$lang->words["It's unknown whether captcha is correct or not, failing"]."</div>");
 				else
-					print("<div style='color:red'>".$lang->words['Incorrect captcha']."</div>");)
+					print("<div style='color:red'>".$lang->words['Incorrect captcha']."</div>");
 			}
 		?>
 	</form>
