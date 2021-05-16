@@ -41,8 +41,10 @@
 	}
 	.boxask button:hover{
 		background-color:#1A17C2;
+		/*
 		border: 1px ridge #000;
 		text-decoration: none;
+		*/
 	}
 	.boxask {
 		text-align:center;
