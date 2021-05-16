@@ -1,7 +1,7 @@
 <?php
-	require_once('../config.php');
-	require_once('../sys/sql.php');
-	require_once('../sys/util.php');
+	require_once('config.php');
+	require_once('sys/sql.php');
+	require_once('sys/util.php');
 
 	class ddl_helper extends sql {
 
