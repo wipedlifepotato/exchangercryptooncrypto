@@ -28,7 +28,7 @@ class Simply_Captcha_Render{
     }
 
 	public function initImage(/*integer*/ $width,/*integer*/ $height){
-        checkGD();
+        $this->checkGD();
 
 	 	$this->im = imagecreatetruecolor($width,$height) or False;
 		imagesavealpha($this->im,true);
