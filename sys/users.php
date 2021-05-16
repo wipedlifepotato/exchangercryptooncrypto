@@ -22,20 +22,22 @@ class users extends sql
         $hashpass = $this->getHashPass($secret ,$password); 
 
         $res = $this->sql->doSQL(sql::sqls['checkHashPassByUser'], $username, $hashpass, $secret);
+        if ( gettype ($res) == "boolean" ) die("mysql query failed: checkHashPassByUser");
         $res = mysqli_fetch_array($res);
-        if ($res['name']!="") return True;	
-	return False;
-	
+        return $res['name'] != "";	
     }
     //        "addUser" => "INSERT INTO users (name, password, secret, REGISTERED) VALUES( '%s', '%s', '%s', 'NOW()')",
     function addUser($password, $nicksize=10)
     {
 	$maxPasswordSize=128;
 	$minPasswordSize=6;
+
+    //TODO localization
+
         if (strlen($password) > $maxPasswordSize)
-            return array(False, ("Вы превысили норму для длины пароля, максимальная длинна ".$maxPasswordSize));
+            return array(False, ("Вы превысили максимум длины пароля, максимальная длина ".$maxPasswordSize));
         if (strlen($password) < $minPasswordSize)
-            return array(False, ("Минимальная длина пароля: ".$minPasswordSize));
+            return array(False, ("Слишком короткий пароль, укажите более длинный, пожалуйста. Минимальная длина пароля: ".$minPasswordSize));
 
 	$username = generateRandString($nicksize);
 	$retries=0;
