@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var loaded = false
 	var loader = document.getElementById("loader")
-	loader.style.display='block'
+	if (loader) loader.style.display='block'
 	var loadertext = document.getElementById("loader-text")
 
 	//TODO magic numbers
