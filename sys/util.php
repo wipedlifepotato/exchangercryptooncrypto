@@ -67,6 +67,6 @@
 		return "$dir/".$ret[rand(0, sizeof($ret)-1)];
    }
    function setRandBackground(){
-	print("<style>body,html{ background-image: url(".get_rand_file()."); }</style>");
+	//кислоты ктото переел //print("<style>body,html{ background-image: url(".get_rand_file()."); }</style>");
    }
 ?>
