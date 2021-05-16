@@ -95,8 +95,8 @@ print('
 
 
 <hr/>
-					<button class="btn btn-primary" type="submit"><?php echo $lang->words['Enter'];?></button>
-					<a class="btn btn-primary" href="index.php" role="button"><?php echo $lang->words['Authorization'];?></a>
+					<button class="btn btn-primary" type="submit"><?php echo $lang->words['Create a user account'];?></button>
+					<a class="btn btn-primary" href="index.php" role="button"><?php echo $lang->words['Login'];?></a>
 				    	<hr/><a href='setLang.php?lang=eng' class="btn btn-primary">ENG</a>
 				    	<a href='setLang.php?lang=rus' class="btn btn-primary">RUS</a>
 <?php

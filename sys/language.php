@@ -16,7 +16,9 @@
 		"Incorrect captcha" => "Капча введена неверно!",
 		"Start private chat" => "Начать приватный чат",
 		"Back" => "Назад",
-		"Conversations" => "Переписки"
+		"Conversations" => "Переписки",
+		"Create a user account" => "Создать учётную запись пользователя",
+		"Login" => "Войти"
 		);
 		function set_language($name){
 			$allow_names=array("rus","eng");
