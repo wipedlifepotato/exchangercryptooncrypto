@@ -2,7 +2,7 @@
     require_once('config.php');
     require_once('sys/users.php');
 
-    $MY_STDOUT = fopen('php://stdout');
+    $MY_STDOUT = fopen('php://stdout','w');
 
     function stdout($str) { global $MY_STDOUT; fwrite($MY_STDOUT, $str); }
     function stdoutprint($str) { log($str); print($str); }
