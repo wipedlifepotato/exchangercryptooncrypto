@@ -25,10 +25,10 @@
 	$rpcuser = $_GET['rpcuser'];
 	$rpcpassword = $_GET['rpcpassword'];
 
-	logprint ("Updating or inserting coinname='$coinname' with rpchost='$rpchost' rpcport='$rpcport' rpcuser='$rpcuser' rpcpassword='$rpcpassword'... ");
+	stdoutprint ("Updating or inserting coinname='$coinname' with rpchost='$rpchost' rpcport='$rpcport' rpcuser='$rpcuser' rpcpassword='$rpcpassword'... ");
 
 	$result = $cryptocoins->addCryptoCoin($coinname, $rpchost, $rpcport, $rpcuser, $rpcpassword);
 
-	logprint ("Result: $result.<br>");
+	stdoutprint ("Result: $result.<br>");
 
 ?>all done.
