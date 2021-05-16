@@ -14,6 +14,7 @@
 		"Enter" => "Вход",
 		"Create a password"=>"Придумайте пароль",
 		"Incorrect captcha" => "Капча введена неверно!",
+		"It's unknown whether captcha is correct or not, failing" => "Неизвестно, верна капча или нет. Отменяем операцию."
 		"Start private chat" => "Начать приватный чат",
 		"Back" => "Назад",
 		"Conversations" => "Переписки",
