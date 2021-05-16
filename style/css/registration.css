@@ -7,7 +7,7 @@
 		opacity: 0.9;
 	}
 	.boxask:hover{
-		opacity:1.0;
+		/*opacity:1.0; создаёт нехорошее мелькание, вьюношеское*/
 	}
 	.boxask form{
 
@@ -29,11 +29,12 @@
 	}
 	.boxask a:hover, .boxask button:hover{
 		background-color:#1A17C2;
+		/*
 		border: 1px ridge #000;
 		text-decoration: none;
+		*/
 		color:cyan;
-                transition-delay:0.1s;
-
+		/*transition-delay:0.1s;*/
 	}
 	.boxask button{
 		/*color:white;*/
