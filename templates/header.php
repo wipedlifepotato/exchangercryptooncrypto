@@ -28,7 +28,7 @@
 	</head>
 	<body>
 
-	<div id='loader'><div id='loader-text'></div></div>
+	<!-- <div id='loader'><div id='loader-text'></div></div> -->
 
 	<noscript>
 		    <style type="text/css">
