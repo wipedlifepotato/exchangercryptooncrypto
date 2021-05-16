@@ -2,6 +2,8 @@
 
 class sql
 {
+    define('SQL_DEBUG_TRACE_ON', false);
+
     const sqls = array(
         "getAllUsers" => "SELECT * from users;",
         "addUser" => "INSERT INTO users (name, password, secret) VALUES( '%s', '%s', '%s')",
@@ -50,9 +52,10 @@ class sql
     function doSQL($sprintf, ...$arguments)
     {
         $string = vsprintf($sprintf, $arguments);
-        	//printf("Debug info: %s\n\r<br>", $string);
+        if(SQL_DEBUG_TRACE_ON)printf("Debug info: %s\n\r<br>", $string);
 	
-        return $result = mysqli_query($this->con, $string);
+        $result = mysqli_query($this->con, $string);
+        return $result;
     }
     function fixAutoIncrementToTable($table, $v)
     {
