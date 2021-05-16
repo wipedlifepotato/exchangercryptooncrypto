@@ -16,7 +16,7 @@ config_var('CHAT_REFRESH_SECONDS', 'ENV_EM_CHAT_REFRESH_SECONDS', 20);
 config_var('MAX_ADDRESS_FOR_WALLET', 'ENV_EM_MAX_ADDRESS_FOR_WALLET', 15);
 config_var('RUNDDL_PASSWORD', 'ENV_EM_RUNDDL_PASSWORD', 'am5Rae2hahb8aiThi2yeif9quieShah6oyaWaipha0ca5ohme2heibahn7oonee3aebooPhe1aejaidieH2siexoophoonoo4Ais');
 config_var('RUNDDL_DBDUMP_FILENAME', 'ENV_EM_RUNDDL_DBDUMP_FILENAME', 'mysql/ddl.sql');
-config_var('DISABLE_RUNDDL', 'ENV_EM_ENABLE_RUNDDL', 'false'); //set to "true" to enable
+config_var('ENABLE_RUNDDL', 'ENV_EM_ENABLE_RUNDDL', 'false'); //set to "true" to enable
 
 define('NEVER_USE_CAPTCHAS_BOOL', true);
 

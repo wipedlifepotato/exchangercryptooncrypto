@@ -1,7 +1,7 @@
 <?php
 	require_once('config.php');
 
-	if (ENV_EM_ENABLE_RUNDDL!="true") die('runddl disabled');
+	if (ENABLE_RUNDDL!="true") die('runddl disabled');
 
 	require_once('sys/sql.php');
 	require_once('sys/util.php');
