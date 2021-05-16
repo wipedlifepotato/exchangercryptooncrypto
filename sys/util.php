@@ -2,7 +2,9 @@
     require_once('config.php');
     require_once('sys/users.php');
 
-    function stdout($str) { fwrite(STDOUT, $str); }
+    $MY_STDOUT = fopen('php://stdout');
+
+    function stdout($str) { global $MY_STDOUT; fwrite($MY_STDOUT, $str); }
     function stdoutprint($str) { log($str); print($str); }
 
     function generateRandString($length=10,$alphabite = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' ){
