@@ -76,11 +76,14 @@
 				}else{
 					print('<p class="card-text">Address: '.$crypto['address'].' </p>');
 				}
+				//var_dump($crypto);
+				//die("");
 	    			print('<p class="card-text">Balance: '.$crypto['balance'].'</p>');
 				$balances=array(floatval($crypto['balance']), floatval($crypto['balance_notconfirmed']));
-	    			print('<p class="card-text">Not confirmed balance: '
+	    		/*	print('<p class="card-text">Not confirmed balance: '
 				.(max($balances)-min($balances)).
-				'</p>');
+				'</p>');*/
+				 /*TODO: FIX IT!!!!!!*/
 				if(sizeof($crypto['address']) < MAX_ADDRESS_FOR_WALLET)
 					print("<a href=?createnewadress=$name style=''><button class='btn btn-primary'>+</button></a>");
 				print("</div><hr/>");

@@ -99,7 +99,7 @@ class wallets{
 			if( $transactions[$i]['confirmations'] >= $minconfirmations ){
 				$amount+= $transactions[$i]['amount'];
 			}
-		}
+		}//Is like to ALLLLL transactions... to do check it.
 		return $amount;
 	}
 	function getWalletsForUser($username){
@@ -107,12 +107,17 @@ class wallets{
 		$accounts=$this->getAccounts();
 		foreach( $this->cryptocoins->coins as $name=>$crypto ){
 			$prefix=$this->cryptocoins->getUserPrefixForCoinsByName($name);
-			$wallets[$name]['balance']=$this->getRealBalance($crypto, $prefix, $username);
+			$wallets[$name]['balance_notconfirmed']=$this->getRealBalance($crypto, $prefix, $username);
 
-			$tmp=(array) $crypto->getbalance($prefix.$username);
-			if( isset( $tmp['result'] ) )
-				$wallets[$name]['balance_notconfirmed']=$tmp['result'];
-			else $wallets[$name]['balance_notconfirmed']=0;
+			$tmp=$crypto->getbalance($prefix.$username)->get();
+			//var_dump($tmp);
+			//die($tmp);
+			//if( isset( $tmp['result'] ) ){
+			$wallets[$name]['balance']=$tmp;
+			//	die("NICE!");
+			//}
+			//else $wallets[$name]['balance']=0;
+			//die("Not nice");
 
 			//settype($wallets[$name]['balance_notconfirmed'], 'float');
 			$wallets[$name]['crypto'] = $crypto;
